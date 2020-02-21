@@ -22,6 +22,9 @@ componentDidMount(){
 }
 
 //update state (searchfield) when we type in searchBox
+//note: if you don't use arrow function you should use this.onSearchChange = this.onSearchChange.bind(this) in constructor()
+//arrow functions and a unique characteristic about them that allows
+//them to set the context of this in whatever it was that declared it in the first place.
 onSearchChange = (event) => {
   this.setState({searchfield: event.target.value});
 }
